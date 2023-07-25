@@ -13,7 +13,6 @@ export class GifsService {
   private apiKey:string = 'CsG75Jc9RmOh8bvXLjMw8hjdMFfpw1TR'
   constructor(private http : HttpClient) {
     this.loadLocalStorage();
-    console.log('gifs service Ready');
   }
 
   get tagHistory() {
@@ -57,7 +56,7 @@ export class GifsService {
     .subscribe(resp => {
 
       this.gifList = resp.data;
-      console.log({gifs: this.gifList});
+      console.log(this.gifList);
     })
     
   }

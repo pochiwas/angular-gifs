@@ -50,11 +50,9 @@ export class GifsService {
           .set('api_key',this.apiKey)
           .set('limit',10)
           .set('q',tag)
-          
-
+      
     this.http.get<SearchResponse>(`${this.serviceUrl}/search`,{params})
     .subscribe(resp => {
-
       this.gifList = resp.data;
       console.log(this.gifList);
     })
